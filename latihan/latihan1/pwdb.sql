@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 19 Jun 2020 pada 16.43
+-- Waktu pembuatan: 19 Jun 2020 pada 17.31
 -- Versi server: 10.4.11-MariaDB
 -- Versi PHP: 7.4.6
 
@@ -28,7 +28,12 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `mahasiswa` (
-  `Nama` int(11) NOT NULL
+  `id` int(11) NOT NULL,
+  `nama` int(15) NOT NULL,
+  `nim` int(11) NOT NULL,
+  `email` int(11) NOT NULL,
+  `jurusan` int(11) NOT NULL,
+  `gambar` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 COMMIT;
 
