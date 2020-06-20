@@ -22,3 +22,24 @@ function query($query)
   }
   return $rows;
 }
+
+
+function tambah($data)
+{
+
+
+  $conn = koneksi();
+
+  $nama = $data['nama'];
+  $nim = $data['nim'];
+  $email = $data['email'];
+  $jurusan = $data['jurusan'];
+  $gambar = $data['gambar'];
+
+  $quer = "INSERT INTO 
+  mahasiswa(nama, nim, email, jurusan, gambar) 
+  VALUES 
+  ('$nama','$nim','$email','$jurusan','$gambar')";
+
+  mysqli_query($conn, $quer);
+}
