@@ -1,22 +1,6 @@
 <?php
-
-// Koneksi ke Database dan pilih database
-$conn = mysqli_connect('localhost', 'root', '', 'pwdb');
-
-// query isi tabel mahasiswa
-$result = mysqli_query($conn, "SELECT * FROM mahasiswa");
-
-// ubah data ke dalam array
-// $row = mysqli_fetch_row($result); //Array Numeric
-// $row = mysqli_fetch_assoc($result); //Array Associative
-// $row = mysqli_fetch_assoc($result); // keduanya
-$rows = [];
-while ($row = mysqli_fetch_assoc($result)) {
-  $rows[] = $row;
-}
-
-// tampung ke variabel mahasiswa
-$mahasiswa = $rows;
+require 'functions.php';
+$mahasiswa = query("SELECT * FROM mahasiswa");
 ?>
 
 <!DOCTYPE html>
